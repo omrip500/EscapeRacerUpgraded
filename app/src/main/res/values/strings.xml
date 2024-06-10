@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Game</string>
+    <string name="app_name">EscapeRacer</string>
     <string name="empty_rock" />
     <string name="car_or_empty_rock" />
     <string name="game_over">Game\nOver</string>

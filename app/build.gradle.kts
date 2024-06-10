@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.game"
+    namespace = "com.example.EscapeRacer"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.game"
+        applicationId = "com.example.EscapeRacer"
         minSdk = 26
         targetSdk = 34
         versionCode = 1

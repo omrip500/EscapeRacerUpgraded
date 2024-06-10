@@ -1,4 +1,4 @@
-package com.example.game;
+package com.example.EscapeRacer;
 
 import android.content.Intent;
 import android.os.Bundle;

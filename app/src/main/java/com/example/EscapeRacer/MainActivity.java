@@ -1,4 +1,4 @@
-package com.example.game;
+package com.example.EscapeRacer;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -15,7 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.core.content.ContextCompat;
 
-import com.example.game.Logic.GameManager;
+import com.example.EscapeRacer.Logic.GameManager;
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 
 import java.util.Objects;

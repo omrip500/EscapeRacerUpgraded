@@ -1,4 +1,4 @@
-package com.example.game.Logic;
+package com.example.EscapeRacer.Logic;
 
 public class GameManager {
     private int numOfCollisions;

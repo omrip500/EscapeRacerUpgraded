@@ -1,0 +1,309 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/road"
+    tools:context=".MainActivity"
+    android:layoutDirection="ltr">
+
+    <GridLayout
+        android:id="@+id/game_grid"
+        android:layout_width="match_parent"
+        android:layout_height="800dp"
+        android:layout_marginTop="55dp"
+        android:columnCount="3"
+        android:rowCount="8"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/rock00"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            app:srcCompat="@drawable/empty"
+            android:contentDescription="@string/empty_rock"/>
+
+        <ImageView
+            android:id="@+id/rock01"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            app:srcCompat="@drawable/empty"
+            android:contentDescription="@string/empty_rock"/>
+
+        <ImageView
+            android:id="@+id/rock02"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            app:srcCompat="@drawable/empty"
+            android:contentDescription="@string/empty_rock"/>
+
+        <ImageView
+            android:id="@+id/rock10"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            app:srcCompat="@drawable/empty"
+            android:contentDescription="@string/empty_rock"/>
+
+        <ImageView
+            android:id="@+id/rock11"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            app:srcCompat="@drawable/empty"
+            android:contentDescription="@string/empty_rock"/>
+
+        <ImageView
+            android:id="@+id/rock12"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            app:srcCompat="@drawable/empty"
+            android:contentDescription="@string/empty_rock"/>
+
+        <ImageView
+            android:id="@+id/rock20"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            app:srcCompat="@drawable/empty"
+            android:contentDescription="@string/empty_rock"/>
+
+        <ImageView
+            android:id="@+id/rock21"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            app:srcCompat="@drawable/empty"
+            android:contentDescription="@string/empty_rock"/>
+
+        <ImageView
+            android:id="@+id/rock22"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            app:srcCompat="@drawable/empty"
+            android:contentDescription="@string/empty_rock"/>
+
+        <ImageView
+            android:id="@+id/rock30"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            app:srcCompat="@drawable/empty"
+            android:contentDescription="@string/empty_rock"/>
+
+        <ImageView
+            android:id="@+id/rock31"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            app:srcCompat="@drawable/empty"
+            android:contentDescription="@string/empty_rock"/>
+
+        <ImageView
+            android:id="@+id/rock32"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            app:srcCompat="@drawable/empty"
+            android:contentDescription="@string/empty_rock"/>
+
+        <ImageView
+            android:id="@+id/rock40"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            app:srcCompat="@drawable/empty"
+            android:contentDescription="@string/empty_rock"/>
+
+        <ImageView
+            android:id="@+id/rock41"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            app:srcCompat="@drawable/empty"
+            android:contentDescription="@string/empty_rock"/>
+
+        <ImageView
+            android:id="@+id/rock42"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            app:srcCompat="@drawable/empty"
+            android:contentDescription="@string/empty_rock"/>
+
+        <ImageView
+            android:id="@+id/rock50"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            app:srcCompat="@drawable/empty"
+            android:contentDescription="@string/empty_rock"/>
+
+        <ImageView
+            android:id="@+id/rock51"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            app:srcCompat="@drawable/empty"
+            android:contentDescription="@string/empty_rock"/>
+
+        <ImageView
+            android:id="@+id/rock52"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            app:srcCompat="@drawable/empty"
+            android:contentDescription="@string/empty_rock"/>
+
+        <ImageView
+            android:id="@+id/rock60"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            app:srcCompat="@drawable/empty"
+            android:contentDescription="@string/empty_rock"/>
+
+        <ImageView
+            android:id="@+id/rock61"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            app:srcCompat="@drawable/empty"
+            android:contentDescription="@string/empty_rock"/>
+
+        <ImageView
+            android:id="@+id/rock62"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            app:srcCompat="@drawable/empty"
+            android:contentDescription="@string/empty_rock"/>
+
+        <ImageView
+            android:id="@+id/carLeft"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            app:srcCompat="@drawable/empty"
+            android:contentDescription="@string/car_or_empty_rock"/>
+
+        <ImageView
+            android:id="@+id/carMiddle"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            app:srcCompat="@drawable/empty"
+            android:contentDescription="@string/car_or_empty_rock"/>
+
+        <ImageView
+            android:id="@+id/carRight"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            app:srcCompat="@drawable/empty"
+            android:contentDescription="@string/car_or_empty_rock"/>
+    </GridLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="132dp"
+        android:layout_height="37dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginEnd="24dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_heart1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/heart" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_heart2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/heart" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/main_IMG_heart3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/heart" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/rightArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/pink"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        app:icon="@drawable/arrow_icon"
+        app:iconGravity="end"
+        tools:ignore="RelativeOverlap">
+    </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/leftArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="14dp"
+        android:backgroundTint="@color/pink"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        app:icon="@drawable/left_icon">
+    </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+
+</RelativeLayout>

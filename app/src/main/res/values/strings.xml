@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Game</string>
+    <string name="empty_rock" />
+    <string name="car_or_empty_rock" />
+    <string name="game_over">Game\nOver</string>
+    <string name="new_game">New Game</string>
+</resources>

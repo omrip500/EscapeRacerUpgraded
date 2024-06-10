@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_margin">16dp</dimen>
+    <dimen name="score_text_size">32sp</dimen>
+    <dimen name="score_large_size">72sp</dimen>
+    <dimen name="flag_width">280dp</dimen>
+    <dimen name="flag_height">200dp</dimen>
+    <dimen name="bottom_margin_default">32dp</dimen>
+    <dimen name="heart_width">140dp</dimen>
+    <dimen name="heart_dimension">40dp</dimen>
+    <dimen name="marginEnd">16dp</dimen>
+</resources>

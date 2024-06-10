@@ -4,7 +4,7 @@ public class GameManager {
     private int numOfCollisions;
     private int life;
     private int lastRockColumn;
-    private int befotrLastRockColumn;
+    private int beforeLastRockColumn;
     private int currentRocksCount;
     private String visibleCar;
     private boolean isGameRunning;
@@ -13,7 +13,7 @@ public class GameManager {
         this.numOfCollisions = 0;
         this.life = 3;
         this.lastRockColumn = -1;
-        this.befotrLastRockColumn = -1;
+        this.beforeLastRockColumn = -1;
         this.currentRocksCount = 0;
         this.visibleCar = "middle";
         this.isGameRunning = false;
@@ -59,26 +59,23 @@ public class GameManager {
         this.visibleCar = visibleCar;
     }
 
-    public GameManager setCurrentRocksCount(int currentRocksCount) {
+    public void setCurrentRocksCount(int currentRocksCount) {
         this.currentRocksCount = currentRocksCount;
-        return this;
     }
 
     public boolean isGameLost() {
         return this.life == 0;
     }
 
-    public int getBefotrLastRockColumn() {
-        return befotrLastRockColumn;
+    public int getBeforeLastRockColumn() {
+        return beforeLastRockColumn;
     }
 
-    public GameManager setBefotrLastRockColumn(int befotrLastRockColumn) {
-        this.befotrLastRockColumn = befotrLastRockColumn;
-        return this;
+    public void setBeforeLastRockColumn(int beforeLastRockColumn) {
+        this.beforeLastRockColumn = beforeLastRockColumn;
     }
 
-    public GameManager setGameRunning(boolean gameRunning) {
+    public void setGameRunning(boolean gameRunning) {
         isGameRunning = gameRunning;
-        return this;
     }
 }

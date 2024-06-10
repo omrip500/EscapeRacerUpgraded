@@ -204,9 +204,9 @@ public class MainActivity extends AppCompatActivity {
         int randomNumber;
         do {
             randomNumber = random.nextInt(numCols);
-        } while (randomNumber == gameManager.getLastRockColumn() || gameManager.getBefotrLastRockColumn() == 0 && gameManager.getLastRockColumn() == 1 && randomNumber == 2 || gameManager.getBefotrLastRockColumn() == 2 && gameManager.getLastRockColumn() == 1 && randomNumber == 0);
+        } while (randomNumber == gameManager.getLastRockColumn() || gameManager.getBeforeLastRockColumn() == 0 && gameManager.getLastRockColumn() == 1 && randomNumber == 2 || gameManager.getBeforeLastRockColumn() == 2 && gameManager.getLastRockColumn() == 1 && randomNumber == 0);
         rocksMatrix[0][randomNumber].setImageResource(R.drawable.rock3);
-        gameManager.setBefotrLastRockColumn(gameManager.getLastRockColumn());
+        gameManager.setBeforeLastRockColumn(gameManager.getLastRockColumn());
         gameManager.setLastRockColumn(randomNumber);
         gameManager.setCurrentRocksCount(gameManager.getCurrentRocksCount() + 1);
     }

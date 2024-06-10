@@ -15,9 +15,8 @@ Welcome to **EscapeRacer**, the thrilling car-themed game where your goal is to 
 
 Check out this demo of the game:
 
-<div align="center">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/bLqI_fGSByI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+[![Demo Video](https://img.youtube.com/vi/bLqI_fGSByI/0.jpg)](https://www.youtube.com/watch?v=bLqI_fGSByI)
+
 
 ## How to Play
 

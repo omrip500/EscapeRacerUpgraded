@@ -35,15 +35,4 @@ EscapeRacer is developed using Android Studio. Below are the key components of t
 - **GameOverActivity**: Handles the game over logic and allows players to start a new game.
 - **GameManager**: Manages the overall game state, including initializing the game, updating the game loop, handling collisions, and managing the player's lives and score.
 
-## Screenshots
-
-![Screenshot 1](app/screenshots/screenshot1.jpg)
-*Game state after launch*
-
-![Screenshot 2](app/screenshots/screenshot2.jpg)
-*One collision, lives reduced from 3 to 2*
-
-![Screenshot 3](app/screenshots/screenshot3.jpg)
-*Game Over*
-
 Thank you for playing EscapeRacer! We hope you enjoy the game as much as we enjoyed creating it.

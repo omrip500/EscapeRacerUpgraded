@@ -220,7 +220,9 @@ public class MainActivity extends AppCompatActivity {
         else {
             do {
                 randomNumber = random.nextInt(numCols);
-            } while (randomNumber == gameManager.getSecond() || gameManager.getFirst() == 0 && gameManager.getSecond() == 1 && randomNumber == 2 || gameManager.getFirst() == 2 && gameManager.getSecond() == 1 && randomNumber == 0);
+            } while (randomNumber == gameManager.getSecond()
+                    || gameManager.getFirst() == 0 && gameManager.getSecond() == 1 && randomNumber == 2
+                    || gameManager.getFirst() == 2 && gameManager.getSecond() == 1 && randomNumber == 0);
 
             gameManager.setFirst(gameManager.getSecond());
             gameManager.setSecond(randomNumber);

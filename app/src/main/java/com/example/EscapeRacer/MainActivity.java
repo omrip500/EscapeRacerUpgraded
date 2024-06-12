@@ -202,12 +202,32 @@ public class MainActivity extends AppCompatActivity {
         checkCollision();
 
         int randomNumber;
-        do {
+
+        if(gameManager.getUpdatingNumber() == 1){
             randomNumber = random.nextInt(numCols);
-        } while (randomNumber == gameManager.getLastRockColumn() || gameManager.getBeforeLastRockColumn() == 0 && gameManager.getLastRockColumn() == 1 && randomNumber == 2 || gameManager.getBeforeLastRockColumn() == 2 && gameManager.getLastRockColumn() == 1 && randomNumber == 0);
+            gameManager.setFirst(randomNumber);
+            gameManager.setUpdatingNumber(gameManager.getUpdatingNumber() + 1);
+        }
+
+        else if(gameManager.getUpdatingNumber() == 2) {
+            do {
+                randomNumber = random.nextInt(numCols);
+            } while(randomNumber == gameManager.getFirst());
+            gameManager.setSecond(randomNumber);
+            gameManager.setUpdatingNumber(gameManager.getUpdatingNumber() + 1);
+        }
+
+        else {
+            do {
+                randomNumber = random.nextInt(numCols);
+            } while (randomNumber == gameManager.getSecond() || gameManager.getFirst() == 0 && gameManager.getSecond() == 1 && randomNumber == 2 || gameManager.getFirst() == 2 && gameManager.getSecond() == 1 && randomNumber == 0);
+
+            gameManager.setFirst(gameManager.getSecond());
+            gameManager.setSecond(randomNumber);
+        }
+
+
         rocksMatrix[0][randomNumber].setImageResource(R.drawable.rock3);
-        gameManager.setBeforeLastRockColumn(gameManager.getLastRockColumn());
-        gameManager.setLastRockColumn(randomNumber);
         gameManager.setCurrentRocksCount(gameManager.getCurrentRocksCount() + 1);
     }
 

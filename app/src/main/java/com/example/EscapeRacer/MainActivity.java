@@ -26,7 +26,7 @@ import com.google.android.material.textview.MaterialTextView;
 import java.util.Objects;
 import java.util.Random;
 
-public class GameActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     private final int numRows = 9;
     private final int numCols = 5;
@@ -64,7 +64,7 @@ public class GameActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_game);
+        setContentView(R.layout.activity_main);
 
         findViews();
         initViews();

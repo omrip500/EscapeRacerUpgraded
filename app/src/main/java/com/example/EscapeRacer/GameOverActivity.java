@@ -38,7 +38,7 @@ public class GameOverActivity extends AppCompatActivity {
     @SuppressLint("SetTextI18n")
     private void initViews() {
         btn_main_menu.setOnClickListener(v -> {
-            Intent intent = new Intent(GameOverActivity.this, MainActivity.class);
+            Intent intent = new Intent(GameOverActivity.this, MenuActivity.class);
             startActivity(intent);
             finish();
         });

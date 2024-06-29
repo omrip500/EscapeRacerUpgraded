@@ -6,7 +6,7 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MenuActivity extends AppCompatActivity {
 
     private Button buttonModeSlow;
     private Button buttonModeFast;
@@ -17,8 +17,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        this.gameIntent = new Intent(this, GameActivity.class);
+        setContentView(R.layout.activity_menu);
+        this.gameIntent = new Intent(this, MainActivity.class);
 
         findViews();
         initViews();

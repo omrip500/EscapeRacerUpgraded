@@ -1,14 +1,15 @@
 package com.example.EscapeRacer.Logic;
 
 public class GameManager {
+    private int profit;
     private int numOfCollisions;
     private int life;
     private int first;
     private int second;
     private int currentRocksCount;
-    private String visibleCar;
     private boolean isGameRunning;
-
+    private int visibleCarColumn;
+    private int distance;
     private int updatingNumber;
 
     public GameManager() {
@@ -17,14 +18,19 @@ public class GameManager {
         this.second = -1;
         this.first = -1;
         this.currentRocksCount = 0;
-        this.visibleCar = "middle";
         this.isGameRunning = false;
         this.updatingNumber = 1;
-
+        this.visibleCarColumn = 2;
+        this.profit = 0;
+        this.distance = 0;
     }
 
     public int getNumOfCollisions() {
         return numOfCollisions;
+    }
+
+    public int getProfit() {
+        return this.profit;
     }
 
     public int getLife() {
@@ -35,8 +41,9 @@ public class GameManager {
         return second;
     }
 
-    public String getVisibleCar() {
-        return visibleCar;
+
+    public int getVisibleCarColumn() {
+        return visibleCarColumn;
     }
 
     public int getCurrentRocksCount() {
@@ -47,12 +54,21 @@ public class GameManager {
         return updatingNumber;
     }
 
-    public void setUpdatingNumber(int updatingNumber) {
-        this.updatingNumber = updatingNumber;
+    public int getFirst() {
+        return first;
     }
 
-    public boolean isGameRunning() {
-        return isGameRunning;
+    public int getDistance() {
+        return distance;
+    }
+
+
+    public void setVisibleCarColumn(int visibleCarColumn) {
+        this.visibleCarColumn = visibleCarColumn;
+    }
+
+    public void setUpdatingNumber(int updatingNumber) {
+        this.updatingNumber = updatingNumber;
     }
 
     public void setNumOfCollisions(int numOfCollisions) {
@@ -67,27 +83,35 @@ public class GameManager {
         this.second = second;
     }
 
-    public void setVisibleCar(String visibleCar) {
-        this.visibleCar = visibleCar;
-    }
-
     public void setCurrentRocksCount(int currentRocksCount) {
         this.currentRocksCount = currentRocksCount;
     }
 
-    public boolean isGameLost() {
-        return this.life == 0;
-    }
-
-    public int getFirst() {
-        return first;
+    public void setGameRunning(boolean gameRunning) {
+        isGameRunning = gameRunning;
     }
 
     public void setFirst(int first) {
         this.first = first;
     }
 
-    public void setGameRunning(boolean gameRunning) {
-        isGameRunning = gameRunning;
+
+    public boolean isGameRunning() {
+        return isGameRunning;
+    }
+
+
+    public boolean isGameLost() {
+        return this.life == 0;
+    }
+
+
+    public void increaseDistance() {
+        this.distance += 5;
+    }
+
+
+    public void increaseProfit() {
+        this.profit ++;
     }
 }

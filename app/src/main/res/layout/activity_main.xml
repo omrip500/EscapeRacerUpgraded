@@ -1,309 +1,77 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/road"
-    tools:context=".MainActivity"
-    android:layoutDirection="ltr">
+    android:background="@color/background_color"
+    tools:context=".MainActivity">
 
-    <GridLayout
-        android:id="@+id/game_grid"
-        android:layout_width="match_parent"
-        android:layout_height="800dp"
-        android:layout_marginTop="55dp"
-        android:columnCount="3"
-        android:rowCount="8"
-        android:visibility="visible">
-
-        <ImageView
-            android:id="@+id/rock00"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            app:srcCompat="@drawable/empty"
-            android:contentDescription="@string/empty_rock"/>
-
-        <ImageView
-            android:id="@+id/rock01"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            app:srcCompat="@drawable/empty"
-            android:contentDescription="@string/empty_rock"/>
-
-        <ImageView
-            android:id="@+id/rock02"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            app:srcCompat="@drawable/empty"
-            android:contentDescription="@string/empty_rock"/>
-
-        <ImageView
-            android:id="@+id/rock10"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            app:srcCompat="@drawable/empty"
-            android:contentDescription="@string/empty_rock"/>
-
-        <ImageView
-            android:id="@+id/rock11"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            app:srcCompat="@drawable/empty"
-            android:contentDescription="@string/empty_rock"/>
-
-        <ImageView
-            android:id="@+id/rock12"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            app:srcCompat="@drawable/empty"
-            android:contentDescription="@string/empty_rock"/>
-
-        <ImageView
-            android:id="@+id/rock20"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            app:srcCompat="@drawable/empty"
-            android:contentDescription="@string/empty_rock"/>
-
-        <ImageView
-            android:id="@+id/rock21"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            app:srcCompat="@drawable/empty"
-            android:contentDescription="@string/empty_rock"/>
-
-        <ImageView
-            android:id="@+id/rock22"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            app:srcCompat="@drawable/empty"
-            android:contentDescription="@string/empty_rock"/>
-
-        <ImageView
-            android:id="@+id/rock30"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            app:srcCompat="@drawable/empty"
-            android:contentDescription="@string/empty_rock"/>
-
-        <ImageView
-            android:id="@+id/rock31"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            app:srcCompat="@drawable/empty"
-            android:contentDescription="@string/empty_rock"/>
-
-        <ImageView
-            android:id="@+id/rock32"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            app:srcCompat="@drawable/empty"
-            android:contentDescription="@string/empty_rock"/>
-
-        <ImageView
-            android:id="@+id/rock40"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            app:srcCompat="@drawable/empty"
-            android:contentDescription="@string/empty_rock"/>
-
-        <ImageView
-            android:id="@+id/rock41"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            app:srcCompat="@drawable/empty"
-            android:contentDescription="@string/empty_rock"/>
-
-        <ImageView
-            android:id="@+id/rock42"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            app:srcCompat="@drawable/empty"
-            android:contentDescription="@string/empty_rock"/>
-
-        <ImageView
-            android:id="@+id/rock50"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            app:srcCompat="@drawable/empty"
-            android:contentDescription="@string/empty_rock"/>
-
-        <ImageView
-            android:id="@+id/rock51"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            app:srcCompat="@drawable/empty"
-            android:contentDescription="@string/empty_rock"/>
-
-        <ImageView
-            android:id="@+id/rock52"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            app:srcCompat="@drawable/empty"
-            android:contentDescription="@string/empty_rock"/>
-
-        <ImageView
-            android:id="@+id/rock60"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            app:srcCompat="@drawable/empty"
-            android:contentDescription="@string/empty_rock"/>
-
-        <ImageView
-            android:id="@+id/rock61"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            app:srcCompat="@drawable/empty"
-            android:contentDescription="@string/empty_rock"/>
-
-        <ImageView
-            android:id="@+id/rock62"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            app:srcCompat="@drawable/empty"
-            android:contentDescription="@string/empty_rock"/>
-
-        <ImageView
-            android:id="@+id/carLeft"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            app:srcCompat="@drawable/empty"
-            android:contentDescription="@string/car_or_empty_rock"/>
-
-        <ImageView
-            android:id="@+id/carMiddle"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            app:srcCompat="@drawable/empty"
-            android:contentDescription="@string/car_or_empty_rock"/>
-
-        <ImageView
-            android:id="@+id/carRight"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            app:srcCompat="@drawable/empty"
-            android:contentDescription="@string/car_or_empty_rock"/>
-    </GridLayout>
-
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="132dp"
-        android:layout_height="37dp"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="@dimen/default_margin"
-        android:layout_marginTop="@dimen/default_margin"
-        android:layout_marginEnd="24dp">
-
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/main_IMG_heart1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/heart" />
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/main_IMG_heart2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="10dp"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/heart" />
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/main_IMG_heart3"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/heart" />
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-
-
-
-    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-        android:id="@+id/rightArrow"
+    <TextView
+        android:id="@+id/menu_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_margin="16dp"
-        android:backgroundTint="@color/pink"
+        android:text="Menu"
+        android:textSize="40sp"
+        android:textColor="@color/text_color"
         android:textStyle="bold"
-        android:textAllCaps="true"
-        app:icon="@drawable/arrow_icon"
-        app:iconGravity="end"
-        tools:ignore="RelativeOverlap">
-    </com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button_mode_slow"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="20dp" />
 
-    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-        android:id="@+id/leftArrow"
-        android:layout_width="115dp"
-        android:layout_height="104dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/pink"
-        android:textAllCaps="true"
-        android:textStyle="bold"
-        app:icon="@drawable/left_icon" />
+    <Button
+        android:id="@+id/button_mode_slow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="@color/button_color"
+        android:elevation="4dp"
+        android:padding="16dp"
+        android:text="2 Button mode - slow"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/menu_text"
+        app:layout_constraintWidth_percent="0.8" />
 
-</RelativeLayout>
+    <Button
+        android:id="@+id/button_mode_fast"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="@color/button_color"
+        android:elevation="4dp"
+        android:padding="16dp"
+        android:text="2 Button mode - fast"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_mode_slow"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <Button
+        android:id="@+id/sensor_mode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="@color/button_color"
+        android:elevation="4dp"
+        android:padding="16dp"
+        android:text="1 Sensor mode"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_mode_fast"
+        app:layout_constraintWidth_percent="0.8" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

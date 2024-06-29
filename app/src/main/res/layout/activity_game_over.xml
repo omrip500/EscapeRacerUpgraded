@@ -1,28 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_height="match_parent">
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/score_LBL_status"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:layout_centerInParent="true"
-        android:textSize="@dimen/score_large_size"
-        android:text="@string/game_over"
-        android:gravity="center"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        />
+        android:gravity="center_horizontal">
 
-    <Button
-        android:id="@+id/btn_new_game"
-        android:layout_width="148dp"
-        android:layout_height="68dp"
-        android:layout_below="@id/score_LBL_status"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:text="@string/new_game" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/score_LBL_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/score_large_size"
+            android:text="@string/game_over"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/score_LBL_coins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="30sp"
+            android:text="Coins collected: 0"
+            android:gravity="center"
+            android:textColor="@color/black" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/score_LBL_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="Duration: 0"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/btn_main_menu"
+            android:layout_width="148dp"
+            android:layout_height="68dp"
+            android:layout_marginTop="16dp"
+            android:text="Main Menu" />
+    </LinearLayout>
 
 </RelativeLayout>

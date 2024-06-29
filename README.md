@@ -1,6 +1,7 @@
-# EscapeRacer
+# EscapeRacer - Upgraded Version
 
-Welcome to **EscapeRacer**, the thrilling car-themed game where your goal is to dodge obstacles and race to the finish line! Test your reflexes and driving skills in this high-speed adventure.
+Welcome to **EscapeRacer** - This upgraded version brings new features and enhancements for an even more exciting experience.
+
 
 ![Logo](app/src/main/res/drawable/logo.png)
 

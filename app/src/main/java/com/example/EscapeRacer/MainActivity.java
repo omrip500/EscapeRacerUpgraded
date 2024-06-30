@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
     private MaterialTextView duration_text;
 
-    private static long delay = 1000L;
+    private static long delay;
 
     final Handler handler = new Handler();
 
@@ -70,11 +70,16 @@ public class MainActivity extends AppCompatActivity {
         initViews();
 
         int gameType = getIntent().getIntExtra("GAME_TYPE", 0);
-        if(gameType == 1) {
+
+        if(gameType == 0)
+            delay = 1000L;
+
+        else if(gameType == 1) {
             delay = 500L;
         }
 
-        if(gameType == 2) {
+        else {
+            delay = 1000L;
             leftArrow.setVisibility(View.INVISIBLE);
             rightArrow.setVisibility(View.INVISIBLE);
             initMoveDetector();

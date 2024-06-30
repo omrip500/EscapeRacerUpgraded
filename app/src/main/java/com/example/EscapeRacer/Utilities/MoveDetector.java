@@ -10,12 +10,12 @@ import com.example.EscapeRacer.Interfaces.MoveCallback;
 
 
 public class MoveDetector {
-    private SensorManager sensorManager;
-    private Sensor sensor;
+    private final SensorManager sensorManager;
+    private final Sensor sensor;
     private SensorEventListener sensorEventListener;
     private long timestamp = 0;
 
-    private MoveCallback moveCallback;
+    private final MoveCallback moveCallback;
 
     public MoveDetector(Context context, MoveCallback moveCallback) {
         sensorManager = (SensorManager)context.getSystemService(Context.SENSOR_SERVICE);
@@ -40,10 +40,10 @@ public class MoveDetector {
     }
 
     private void calculateMove(float x) {
-        if (System.currentTimeMillis() - timestamp > 250) {
+        if (System.currentTimeMillis() - timestamp > 100) {
             timestamp = System.currentTimeMillis();
 
-            float threshold = 3.5f; // סף לתנועה ימינה או שמאלה
+            float threshold = 1.5f;
 
             if (x < -threshold) {
                 if (moveCallback != null) {

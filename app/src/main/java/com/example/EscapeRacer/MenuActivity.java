@@ -12,13 +12,12 @@ public class MenuActivity extends AppCompatActivity {
     private Button buttonModeFast;
     private Button sensorMode;
 
-    private Intent gameIntent;
+    private Button high_scores;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
-        this.gameIntent = new Intent(this, MainActivity.class);
 
         findViews();
         initViews();
@@ -28,24 +27,34 @@ public class MenuActivity extends AppCompatActivity {
         buttonModeSlow = findViewById(R.id.button_mode_slow);
         buttonModeFast = findViewById(R.id.button_mode_fast);
         sensorMode = findViewById(R.id.sensor_mode);
+        high_scores = findViewById(R.id.high_scores);
     }
 
     private void initViews() {
-        buttonModeSlow.setOnClickListener( v-> {
+        buttonModeSlow.setOnClickListener(v -> {
+            Intent gameIntent = new Intent(MenuActivity.this, MainActivity.class);
             gameIntent.putExtra("GAME_TYPE", 0);
             startActivity(gameIntent);
             finish();
         });
 
-        buttonModeFast.setOnClickListener( v-> {
+        buttonModeFast.setOnClickListener(v -> {
+            Intent gameIntent = new Intent(MenuActivity.this, MainActivity.class);
             gameIntent.putExtra("GAME_TYPE", 1);
             startActivity(gameIntent);
             finish();
         });
 
-        sensorMode.setOnClickListener( v-> {
+        sensorMode.setOnClickListener(v -> {
+            Intent gameIntent = new Intent(MenuActivity.this, MainActivity.class);
             gameIntent.putExtra("GAME_TYPE", 2);
             startActivity(gameIntent);
+            finish();
+        });
+
+        high_scores.setOnClickListener(v -> {
+            Intent highScoresIntent = new Intent(MenuActivity.this, HighScoresActivity.class);
+            startActivity(highScoresIntent);
             finish();
         });
     }

@@ -8,11 +8,9 @@ import java.util.concurrent.Executors;
 
 public class SoundPlayer {
 
-    private Context context;
-    private Executor executor;
+    private final Context context;
+    private final Executor executor;
     private MediaPlayer mediaPlayer;
-    private int resID;
-
     public SoundPlayer(Context context) {
         this.context = context;
         this.executor = Executors.newSingleThreadExecutor();
@@ -24,9 +22,7 @@ public class SoundPlayer {
                 mediaPlayer = MediaPlayer.create(context, resID);
                 mediaPlayer.setVolume(1.0f, 1.0f);
                 mediaPlayer.start();
-                mediaPlayer.setOnCompletionListener(mp -> {
-                    mediaPlayer.release();
-                });
+                mediaPlayer.setOnCompletionListener(this::onCompletion);
             });
         }
     }
@@ -38,5 +34,9 @@ public class SoundPlayer {
                 mediaPlayer = null;
             });
         }
+    }
+
+    private void onCompletion(MediaPlayer mp) {
+        mediaPlayer.release();
     }
 }

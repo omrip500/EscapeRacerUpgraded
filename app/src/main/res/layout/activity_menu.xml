@@ -74,4 +74,22 @@
         app:layout_constraintTop_toBottomOf="@id/button_mode_fast"
         app:layout_constraintWidth_percent="0.8" />
 
+    <Button
+        android:id="@+id/high_scores"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/button_background"
+        android:backgroundTint="@color/button_color"
+        android:elevation="4dp"
+        android:padding="16dp"
+        android:text="High Scores"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sensor_mode"
+        app:layout_constraintWidth_percent="0.8" />
+    ```
+
 </androidx.constraintlayout.widget.ConstraintLayout>

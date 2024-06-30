@@ -2,7 +2,6 @@
 
 Welcome to **EscapeRacer** - This upgraded version brings new features and enhancements for an even more exciting experience.
 
-
 ![Logo](app/src/main/res/drawable/logo.png)
 
 ## Features
@@ -17,13 +16,13 @@ Welcome to **EscapeRacer** - This upgraded version brings new features and enhan
 - **Coin Collection**: Collect coins along the way and track the number of coins you have gathered at the top of the screen.
 - **Odometer Display**: Keep an eye on your duration at the top of the screen.
 - **Sound Effects**: Enjoy a crash sound when you hit a rock and a pleasant sound when you collect a coin.
+- **High Score Screen**: View your 10 high scores and see where you rank. Tap on a high score to see the map location where the score was set.
 
 ## Demo Video
 
 Check out this demo of the game:
 
-[![Demo Video](https://img.youtube.com/vi/zsJLtIOM8Zk/0.jpg)](https://youtu.be/zsJLtIOM8Zk)
-
+[![Demo Video](https://img.youtube.com/vi/1vIX2zXCLAQ/0.jpg)](https://youtu.be/1vIX2zXCLAQ)
 
 ## How to Play
 
@@ -35,6 +34,7 @@ Check out this demo of the game:
 6. **Lives System**: The player starts the game with three lives (three hearts). Each collision with a rock reduces the lives by one. When lives reach zero, it's game over.
 7. **Collision Effects**: On each collision with a rock, the device vibrates, a crash sound plays, and a toast message "Oops" appears on the screen.
 8. **Game Over**: After a game over, you can start a new game.
+9. **High Scores**: You can go to the high scores screen to see your top ten scores.
 
 ## Development
 
@@ -47,6 +47,6 @@ EscapeRacer is developed using Android Studio. Below are the key components of t
 - **moveCallback Interface**: Defines the methods for handling movement detection.
 - **moveDetector Utility**: Detects device movements to the left or right using the sensor.
 - **SoundPlayer Utility**: Manages the sound effects within the game.
-
+- **HighScoreActivity**: Displays the high scores and allows the player to view the map location where each score was set.
 
 Thank you for playing EscapeRacer! We hope you enjoy the game as much as we enjoyed creating it.

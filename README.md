@@ -22,7 +22,7 @@ Welcome to **EscapeRacer** - This upgraded version brings new features and enhan
 
 Check out this demo of the game:
 
-[![Demo Video](https://img.youtube.com/vi/1vIX2zXCLAQ/0.jpg)](https://youtu.be/1vIX2zXCLAQ)
+[![Demo Video](https://img.youtube.com/vi/DsOdtQSViUI/0.jpg)](https://youtu.be/DsOdtQSViUI)
 
 ## How to Play
 

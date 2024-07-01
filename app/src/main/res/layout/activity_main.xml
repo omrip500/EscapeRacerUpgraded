@@ -445,7 +445,7 @@
             android:id="@+id/duration_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Duration: 0"
+            android:text="Distance: 0"
             android:textSize="20sp"
             android:textColor="@android:color/black"
             android:textStyle="bold"/>

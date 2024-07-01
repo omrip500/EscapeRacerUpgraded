@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:gravity="center"
-            android:text="Duration: 0"
+            android:text="Distance: 0"
             android:textColor="@color/black"
             android:textSize="30sp" />
 

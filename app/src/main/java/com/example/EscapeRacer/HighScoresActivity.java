@@ -10,6 +10,8 @@ import com.example.EscapeRacer.Fragments.HighScoresFragment;
 import com.example.EscapeRacer.Fragments.MapFragment;
 import com.example.EscapeRacer.Interfaces.OnHighScoreClickListener;
 
+import java.util.Objects;
+
 public class HighScoresActivity extends AppCompatActivity implements OnHighScoreClickListener {
 
     private MapFragment mapFragment;
@@ -22,10 +24,8 @@ public class HighScoresActivity extends AppCompatActivity implements OnHighScore
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        // הסתרת הכותרת המובנית של ה-Toolbar
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayShowTitleEnabled(false);
 
-        // הפעלת כפתור ה-Up
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         Fragment highScoresFragment = new HighScoresFragment();
@@ -40,7 +40,6 @@ public class HighScoresActivity extends AppCompatActivity implements OnHighScore
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
-            // פעולת החזרה ל-MenuActivity
             Intent intent = new Intent(this, MenuActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);

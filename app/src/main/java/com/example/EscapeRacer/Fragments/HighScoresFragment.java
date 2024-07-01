@@ -1,5 +1,6 @@
 package com.example.EscapeRacer.Fragments;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,7 +28,7 @@ public class HighScoresFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_high_scores, container, false);
         scoresContainer = view.findViewById(R.id.scores_container);
-        sharedPreferencesManager = new SharedPreferencesManager(getContext());
+        sharedPreferencesManager = new SharedPreferencesManager(requireContext());
         if (getActivity() instanceof OnHighScoreClickListener) {
             highScoreClickListener = (OnHighScoreClickListener) getActivity();
         }
@@ -35,6 +36,7 @@ public class HighScoresFragment extends Fragment {
         return view;
     }
 
+    @SuppressLint("SetTextI18n")
     private void displayHighScores() {
         List<String> highScores = sharedPreferencesManager.getHighScores();
         for (int i = 0; i < highScores.size(); i++) {
@@ -45,7 +47,7 @@ public class HighScoresFragment extends Fragment {
             double latitude = Double.parseDouble(locationParts[0]);
             double longitude = Double.parseDouble(locationParts[1]);
 
-            MaterialCardView cardView = new MaterialCardView(getContext());
+            MaterialCardView cardView = new MaterialCardView(requireContext());
             cardView.setLayoutParams(new LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.MATCH_PARENT,
                     LinearLayout.LayoutParams.WRAP_CONTENT));
@@ -54,8 +56,8 @@ public class HighScoresFragment extends Fragment {
             cardView.setRadius(16);
             cardView.setCardBackgroundColor(getResources().getColor(android.R.color.white, null));
 
-            MaterialTextView scoreView = new MaterialTextView(getContext());
-            scoreView.setText((i + 1) + ". Duration: " + duration + " sec");
+            MaterialTextView scoreView = new MaterialTextView(requireContext());
+            scoreView.setText((i + 1) + ". Distance: " + duration);
             scoreView.setTextSize(18);
             scoreView.setPadding(8, 8, 8, 8);
             scoreView.setTextColor(getResources().getColor(android.R.color.black, null));

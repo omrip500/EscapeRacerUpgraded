@@ -9,7 +9,6 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Button;
 
 import androidx.annotation.NonNull;
@@ -30,6 +29,7 @@ public class GameOverActivity extends AppCompatActivity {
     private int duration;
     private LocationManager locationManager;
     private SharedPreferencesManager sharedPreferencesManager;
+    private LocationListener locationListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +37,7 @@ public class GameOverActivity extends AppCompatActivity {
         setContentView(R.layout.activity_game_over);
         Intent intent = getIntent();
         this.coinsCollected = intent.getIntExtra("COINS_COLLECTED", 0);
-        this.duration = intent.getIntExtra("DURATION", 0);
+        this.duration = intent.getIntExtra("DISTANCE", 0);
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         sharedPreferencesManager = new SharedPreferencesManager(this);
         findViews();
@@ -62,7 +62,7 @@ public class GameOverActivity extends AppCompatActivity {
 
         scoreLBLStatus.setText("Game Over");
         scoreLBLCoin.setText("Coins collected: " + this.coinsCollected);
-        score_LBL_duration.setText("Duration: " + this.duration);
+        score_LBL_duration.setText("Distance: " + this.duration);
     }
 
     private void saveHighScoreWithLocation() {
@@ -75,27 +75,26 @@ public class GameOverActivity extends AppCompatActivity {
 
     @SuppressLint("MissingPermission")
     private void getLastLocationAndSave() {
-        Log.d("Location", "Requesting network location updates");
-        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, new LocationListener() {
+        locationListener = new LocationListener() {
             @Override
             public void onLocationChanged(@NonNull Location location) {
                 double latitude = location.getLatitude();
                 double longitude = location.getLongitude();
                 sharedPreferencesManager.saveHighScore(duration, latitude, longitude);
+                locationManager.removeUpdates(locationListener);
             }
 
             @Override
-            public void onStatusChanged(String provider, int status, Bundle extras) {
-            }
+            public void onStatusChanged(String provider, int status, Bundle extras) {}
 
             @Override
-            public void onProviderEnabled(@NonNull String provider) {
-            }
+            public void onProviderEnabled(@NonNull String provider) {}
 
             @Override
-            public void onProviderDisabled(@NonNull String provider) {
-            }
-        });
+            public void onProviderDisabled(@NonNull String provider) {}
+        };
+
+        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, locationListener);
     }
 
     @Override

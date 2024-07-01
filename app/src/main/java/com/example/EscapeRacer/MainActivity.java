@@ -348,14 +348,14 @@ public class MainActivity extends AppCompatActivity {
             int index = main_IMG_hearts.length - gameManager.getNumOfCollisions();
             main_IMG_hearts[index].setImageResource(R.drawable.empty);
         }
-        duration_text.setText("Duration: " + gameManager.getDistance());
+        duration_text.setText("Distance: " + gameManager.getDistance());
         coinCount.setText(": " + gameManager.getProfit());
     }
 
     private void changeActivity() {
         Intent gameOverIntent = new Intent(this, GameOverActivity.class);
         gameOverIntent.putExtra("COINS_COLLECTED", gameManager.getProfit());
-        gameOverIntent.putExtra("DURATION", gameManager.getDistance());
+        gameOverIntent.putExtra("DISTANCE", gameManager.getDistance());
         startActivity(gameOverIntent);
         finish();
     }

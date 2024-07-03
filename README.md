@@ -34,7 +34,7 @@ Check out this demo of the game:
 6. **Lives System**: The player starts the game with three lives (three hearts). Each collision with a rock reduces the lives by one. When lives reach zero, it's game over.
 7. **Collision Effects**: On each collision with a rock, the device vibrates, a crash sound plays, and a toast message "Oops" appears on the screen.
 8. **Game Over**: After a game over, you can start a new game.
-9. **High Scores**: You can go to the high scores screen to see your top ten scores.
+9. **High Scores**: You can go to the high scores screen to see your top ten scores. When a high score is selected, the map focuses on the location where that score was set, providing an interactive way to review top performances.
 
 ## Development
 
@@ -47,6 +47,8 @@ EscapeRacer is developed using Android Studio. Below are the key components of t
 - **moveCallback Interface**: Defines the methods for handling movement detection.
 - **moveDetector Utility**: Detects device movements to the left or right using the sensor.
 - **SoundPlayer Utility**: Manages the sound effects within the game.
-- **HighScoreActivity**: Displays the high scores and allows the player to view the map location where each score was set.
+- **HighScoreActivity**: Displays the high scores and allows the player to view the map location where each score was set. This activity includes two fragments:
+  - **MapFragment**: Responsible for displaying the map.
+  - **HighScoresFragment**: Responsible for displaying the high scores.
 
 Thank you for playing EscapeRacer! We hope you enjoy the game as much as we enjoyed creating it.
